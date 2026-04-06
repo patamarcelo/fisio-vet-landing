@@ -135,9 +135,11 @@ img {
 .brand-mark {
   width: 42px;
   height: 42px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 14px 30px rgba(201, 111, 45, 0.26);
+}
+
+.brand-mark svg {
+  width: 100%;
+  height: 100%;
 }
 
 .nav-links {

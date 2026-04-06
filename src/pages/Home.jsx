@@ -46,7 +46,23 @@ export default function Home() {
       <header className="topbar">
         <div className="container topbar-inner">
           <a href="#top" className="brand">
-            <div className="brand-mark" />
+            <div className="brand-mark">
+              <svg viewBox="0 0 64 64">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#c96f2d" />
+                    <stop offset="100%" stopColor="#f0a64a" />
+                  </linearGradient>
+                </defs>
+
+                <rect width="64" height="64" rx="18" fill="url(#g)" />
+
+                <circle cx="22" cy="28" r="6" fill="white" />
+                <circle cx="42" cy="28" r="6" fill="white" />
+                <circle cx="32" cy="20" r="5" fill="white" />
+                <ellipse cx="32" cy="40" rx="10" ry="7" fill="white" />
+              </svg>
+            </div>
             <span>FisioVet Domiciliar</span>
           </a>
 
@@ -103,7 +119,7 @@ export default function Home() {
           <div className="site-footer-top">
             <div className="site-footer-brand">
               <div className="site-footer-logo">
-                <div className="brand-mark" />
+                <img src="/favicon.svg" alt="FisioVet" className="brand-mark" />
                 <div>
                   <strong>FisioVet Domiciliar</strong>
                   <span>Fisioterapia e reabilitação veterinária em Porto Alegre e região</span>

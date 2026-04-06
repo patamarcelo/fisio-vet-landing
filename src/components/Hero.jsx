@@ -5,9 +5,7 @@ const INSTAGRAM_URL = 'https://instagram.com/seuinstagram'
 
 export default function Hero() {
   const openWhatsApp = () => {
-    trackEvent('click_whatsapp_hero', {
-      section: 'hero',
-    })
+    trackEvent('click_whatsapp_hero', { section: 'hero' })
 
     const text = encodeURIComponent(
       'Olá! Gostaria de saber mais sobre fisioterapia veterinária domiciliar para meu pet.'
@@ -17,68 +15,98 @@ export default function Hero() {
   }
 
   const openInstagram = () => {
-    trackEvent('click_instagram', {
-      section: 'hero',
-    })
-
+    trackEvent('click_instagram', { section: 'hero' })
     window.open(INSTAGRAM_URL, '_blank')
   }
 
   return (
     <section className="hero">
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <div className="badge">Atendimento domiciliar em Porto Alegre e região</div>
+      <div className="container">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <div className="badge">Fisioterapia e reabilitação veterinária em Porto Alegre</div>
 
-          <h1>
-            Fisioterapia veterinária
-            <br />
-            com cuidado real,
-            <br />
-            no conforto da sua casa.
-          </h1>
+            <div className="hero-headline-wrap">
+              <div>
+                <h1>
+                  Cuidado,
+                  <br />
+                  movimento
+                  <br />
+                  e conforto
+                  <br />
+                  para o seu pet.
+                </h1>
 
-          <p>
-            Atendimento personalizado para pets em recuperação, com dor, mobilidade reduzida
-            ou necessidade de reabilitação. Mais conforto para o animal, mais praticidade
-            para a família e um cuidado muito mais humanizado.
-          </p>
+                <p>
+                  Atendimento domiciliar com uma abordagem acolhedora, individualizada e focada
+                  em reabilitação, mobilidade e qualidade de vida. Um cuidado técnico, humano
+                  e pensado para a rotina real da família.
+                </p>
 
-          <div className="hero-actions">
-            <button className="btn btn-primary" onClick={openWhatsApp}>
-              Agendar pelo WhatsApp
-            </button>
+                <div className="hero-actions">
+                  <button className="btn btn-primary" onClick={openWhatsApp}>
+                    Agendar pelo WhatsApp
+                  </button>
 
-            <button className="btn btn-secondary" onClick={openInstagram}>
-              Ver Instagram
-            </button>
-          </div>
+                  <button className="btn btn-secondary" onClick={openInstagram}>
+                    Ver Instagram
+                  </button>
+                </div>
 
-          <div className="hero-points">
-            <div className="hero-point">• Atendimento em casa</div>
-            <div className="hero-point">• Avaliação individual</div>
-            <div className="hero-point">• Casos ortopédicos e neurológicos</div>
-            <div className="hero-point">• Mais conforto para o pet</div>
-          </div>
-        </div>
-
-        <div className="hero-card">
-          <div className="hero-card-image" />
-          <div className="hero-card-body">
-            <div className="hero-metrics">
-              <div className="metric-card">
-                <strong>Casa</strong>
-                <span>Menos estresse e mais adaptação à rotina do pet.</span>
+                <div className="hero-points">
+                  <div className="hero-point">Atendimento domiciliar</div>
+                  <div className="hero-point">Pós-operatório e reabilitação</div>
+                  <div className="hero-point">Porto Alegre e região</div>
+                  <div className="hero-point">Mais conforto para o pet</div>
+                </div>
               </div>
 
-              <div className="metric-card">
-                <strong>Cuidado</strong>
-                <span>Conduta personalizada conforme avaliação clínica.</span>
+              <div className="hero-visual">
+                <div className="hero-blob-1" />
+                <div className="hero-blob-2" />
+                <div className="hero-blob-3" />
+
+                <div className="hero-photo-card">
+                  <div className="hero-photo" />
+                </div>
+
+                <div className="floating-mini-card card-a">
+                  <strong>Atendimento domiciliar</strong>
+                  <span>Mais conforto e menos desgaste para o animal.</span>
+                </div>
+
+                <div className="floating-mini-card card-b">
+                  <strong>Porto Alegre e região</strong>
+                  <span>Disponibilidade sob consulta conforme localização.</span>
+                </div>
+
+                <div className="floating-mini-card card-c">
+                  <strong>Reabilitação veterinária</strong>
+                  <span>Abordagem técnica com olhar humano e acolhedor.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="trust-strip">
+              <div className="trust-item">
+                <strong>Atendimento em casa</strong>
+                <span>Mais adaptação à rotina e menos estresse no deslocamento.</span>
               </div>
 
-              <div className="metric-card">
-                <strong>Evolução</strong>
-                <span>Acompanhamento focado em mobilidade e qualidade de vida.</span>
+              <div className="trust-item">
+                <strong>Plano individual</strong>
+                <span>Cada caso é avaliado de forma personalizada e segura.</span>
+              </div>
+
+              <div className="trust-item">
+                <strong>Foco funcional</strong>
+                <span>Mobilidade, conforto, recuperação e qualidade de vida.</span>
+              </div>
+
+              <div className="trust-item">
+                <strong>Contato próximo</strong>
+                <span>Orientações claras para a família acompanhar a evolução.</span>
               </div>
             </div>
           </div>

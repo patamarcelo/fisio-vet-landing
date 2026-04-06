@@ -4,39 +4,39 @@ export default function HowItWorks() {
       number: '1',
       title: 'Primeiro contato',
       description:
-        'Você envia uma mensagem no WhatsApp, explica o caso e recebe as informações iniciais sobre atendimento e região.',
+        'Você explica o caso pelo WhatsApp e recebe as orientações iniciais sobre o atendimento.',
     },
     {
       number: '2',
-      title: 'Avaliação domiciliar',
+      title: 'Avaliação do pet',
       description:
-        'É feita uma avaliação individual do pet para entender histórico, limitações, dor, funcionalidade e objetivos do tratamento.',
+        'É feita uma avaliação individual para entender histórico, mobilidade, dor, rotina e necessidade clínica.',
     },
     {
       number: '3',
       title: 'Plano terapêutico',
       description:
-        'Após a avaliação, é definida a melhor estratégia de acompanhamento conforme a necessidade clínica do animal.',
+        'Após a avaliação, é definida a melhor estratégia de acompanhamento para aquele momento.',
     },
     {
       number: '4',
-      title: 'Evolução acompanhada',
+      title: 'Acompanhamento e evolução',
       description:
-        'As sessões seguem com monitoramento de progresso, adaptação de condutas e orientações para casa.',
+        'O tratamento segue com ajustes conforme a resposta do pet e orientações práticas para a família.',
     },
   ]
 
   return (
     <section className="section" id="como-funciona">
-      <div className="container split-panel">
-        <div className="panel-visual" />
+      <div className="container editorial-split">
+        <div className="editorial-photo" />
 
-        <div className="panel-content">
+        <div className="editorial-content">
           <div className="badge">Como funciona</div>
-          <h2 className="section-title">Um processo simples, claro e focado no bem-estar do pet.</h2>
+          <h2 className="section-title">Um processo claro, delicado e pensado para a rotina real do pet.</h2>
           <p className="section-subtitle">
-            Desde o primeiro contato até o acompanhamento da evolução, tudo é pensado para tornar
-            o cuidado mais acessível, humanizado e eficiente.
+            O atendimento foi pensado para ser simples no contato, cuidadoso na avaliação
+            e consistente ao longo da evolução clínica.
           </p>
 
           {steps.map((step) => (

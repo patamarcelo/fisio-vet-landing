@@ -7,21 +7,21 @@ export default function Seo() {
       <title>Fisioterapia Veterinária Domiciliar em Porto Alegre</title>
       <meta
         name="description"
-        content="Atendimento domiciliar de fisioterapia veterinária em Porto Alegre e região. Mais conforto, mobilidade e qualidade de vida para seu pet."
+        content="Atendimento domiciliar de fisioterapia e reabilitação veterinária em Porto Alegre e região, com foco em mobilidade, conforto e qualidade de vida para o seu pet."
       />
       <meta
         name="keywords"
-        content="fisioterapia veterinária, fisioterapia pet, reabilitação veterinária, fisioterapia veterinária porto alegre, atendimento domiciliar pet"
+        content="fisioterapia veterinária, reabilitação veterinária, fisioterapia pet porto alegre, atendimento domiciliar pet, fisioterapia para cães, fisioterapia veterinária em casa"
       />
       <meta name="robots" content="index,follow" />
       <meta property="og:title" content="Fisioterapia Veterinária Domiciliar em Porto Alegre" />
       <meta
         property="og:description"
-        content="Atendimento em casa para pets com dor, mobilidade reduzida, pós-operatório e reabilitação."
+        content="Cuidado técnico, acolhedor e personalizado para pets em atendimento domiciliar."
       />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="pt_BR" />
-      <meta name="theme-color" content="#0b1020" />
+      <meta name="theme-color" content="#f8eadb" />
     </Helmet>
   )
 }

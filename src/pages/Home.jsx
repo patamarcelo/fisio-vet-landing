@@ -6,6 +6,7 @@ import HowItWorks from '../components/HowItWorks'
 import Conditions from '../components/Conditions'
 import Testimonials from '../components/Testimonials'
 import ServiceArea from '../components/ServiceArea'
+import VaccinesSection from '../components/VaccinesSection'
 import InstagramSection from '../components/InstagramSection'
 import FAQ from '../components/FAQ'
 import FooterCTA from '../components/FooterCTA'
@@ -16,13 +17,14 @@ import { trackEvent } from '../utils/trackEvent'
 export default function Home() {
   useEffect(() => {
     initGA()
-    trackEvent('page_view', {
-      page: 'home',
-    })
+    trackEvent('page_view', { page: 'home' })
   }, [])
 
   return (
     <div className="page-shell">
+      <div className="bg-shape-a" />
+      <div className="bg-shape-b" />
+
       <Seo />
 
       <header className="topbar">
@@ -36,7 +38,8 @@ export default function Home() {
             <a href="#beneficios">Benefícios</a>
             <a href="#como-funciona">Como funciona</a>
             <a href="#casos">Casos</a>
-            <a href="#depoimentos">Depoimentos</a>
+            <a href="#vacinas">Vacinas</a>
+            <a href="#instagram">Instagram</a>
             <a href="#faq">FAQ</a>
           </nav>
 
@@ -58,6 +61,7 @@ export default function Home() {
         <Conditions />
         <Testimonials />
         <ServiceArea />
+        <VaccinesSection />
         <InstagramSection />
         <FAQ />
         <FooterCTA />
@@ -67,7 +71,7 @@ export default function Home() {
         <div className="container">
           <div className="footer-row">
             <span>Fisioterapia Veterinária Domiciliar • Porto Alegre e região</span>
-            <span>Landing inicial para validação comercial e campanhas</span>
+            <span>Versão 2.1 com hero ampliado, botão flutuante redondo e seção de vacinas</span>
           </div>
         </div>
       </footer>

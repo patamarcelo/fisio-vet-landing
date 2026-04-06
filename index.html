@@ -1,22 +1,102 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fisio-vet-landing</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7Z91XP52B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-T7Z91XP52B');
-</script>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title (SEO principal) -->
+    <title>Fisioterapia Veterinária em Porto Alegre | Atendimento Domiciliar</title>
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Fisioterapia e reabilitação veterinária em Porto Alegre. Atendimento domiciliar com foco em mobilidade, conforto e qualidade de vida para o seu pet."
+    />
+
+    <!-- Keywords (não é tão relevante hoje, mas ajuda contexto) -->
+    <meta
+      name="keywords"
+      content="fisioterapia veterinária, fisioterapia pet, reabilitação animal, veterinário domiciliar, fisioterapia cachorro, fisioterapia gato, Porto Alegre veterinário"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="FisioVet Porto Alegre" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://fisiovetlanding.netlify.app/" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#c96f2d" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph (Facebook / WhatsApp preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fisioterapia Veterinária em Porto Alegre" />
+    <meta
+      property="og:description"
+      content="Atendimento domiciliar com foco em reabilitação, mobilidade e qualidade de vida do seu pet."
+    />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" />
+    <meta property="og:url" content="https://fisiovetlanding.netlify.app/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fisioterapia Veterinária em Porto Alegre" />
+    <meta
+      name="twitter:description"
+      content="Cuidado domiciliar com foco em reabilitação e bem-estar do seu pet."
+    />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" />
+
+    <!-- Geo SEO (IMPORTANTE para local) -->
+    <meta name="geo.region" content="BR-RS" />
+    <meta name="geo.placename" content="Porto Alegre" />
+
+    <!-- Structured Data (SEO avançado Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Fisioterapia Veterinária Porto Alegre",
+        "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
+        "description": "Fisioterapia e reabilitação veterinária domiciliar em Porto Alegre.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Porto Alegre"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Porto Alegre",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://instagram.com/vet.eduardapata"
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T7Z91XP52B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T7Z91XP52B');
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- App -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

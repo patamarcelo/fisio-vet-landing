@@ -1,6 +1,6 @@
 import { trackEvent } from '../utils/trackEvent'
 
-const WHATSAPP_NUMBER = '5551999999999'
+const WHATSAPP_NUMBER = '5551992806633'
 
 export default function VaccinesSection() {
   const handleClick = () => {
@@ -25,7 +25,7 @@ export default function VaccinesSection() {
     {
       title: 'Mais praticidade para a família',
       description:
-        'Quando bem integrada à rotina do atendimento, a vacinação agrega valor, conveniência e segurança.',
+        'Quando bem integrada à rotina do atendimento, a vacinação agrega conveniência e segurança.',
     },
     {
       title: 'Relação de confiança',
@@ -35,28 +35,32 @@ export default function VaccinesSection() {
     {
       title: 'Produto estratégico',
       description:
-        'É um serviço importante tanto do ponto de vista clínico quanto comercial, porque atende uma necessidade real e recorrente.',
+        'É um serviço importante do ponto de vista clínico e comercial, porque atende uma necessidade real e recorrente.',
     },
   ]
 
   return (
     <section className="section" id="vacinas">
       <div className="container">
-        <div className="vaccine-grid">
-          <div className="vaccine-visual" />
+        <div className="vaccine-grid premium-vaccine-grid">
+          <div className="vaccine-visual premium-vaccine-visual">
+            <div className="vaccine-visual-badge">
+              <strong>Vacinas e prevenção</strong>
+              <span>mais cuidado ao longo de toda a jornada do pet</span>
+            </div>
+          </div>
 
-          <div className="vaccine-panel">
+          <div className="vaccine-panel premium-vaccine-panel">
             <div className="badge">Vacinas e prevenção</div>
-            <h2 className="section-title">Vacinação também é uma frente valiosa dentro da jornada de cuidado.</h2>
+            <h2 className="section-title">Um serviço importante, recorrente e valioso para comunicar.</h2>
             <p className="section-subtitle">
-              Além da fisioterapia e da reabilitação, a prevenção é um tema forte para comunicar na landing.
-              Isso amplia o posicionamento profissional, reforça autoridade e traz um serviço importante
-              para a rotina de saúde do pet.
+              Além da fisioterapia e da reabilitação, a vacinação fortalece o posicionamento
+              profissional, amplia a jornada de cuidado e reforça confiança na rotina de saúde do pet.
             </p>
 
             <div className="vaccine-list">
               {items.map((item) => (
-                <div className="vaccine-item" key={item.title}>
+                <div className="vaccine-item premium-vaccine-item" key={item.title}>
                   <strong>{item.title}</strong>
                   <span>{item.description}</span>
                 </div>

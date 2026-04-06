@@ -1,7 +1,7 @@
 import { trackEvent } from '../utils/trackEvent'
 
-const WHATSAPP_NUMBER = '5551999999999'
-const INSTAGRAM_URL = 'https://instagram.com/seuinstagram'
+const WHATSAPP_NUMBER = '5551992806633'
+const INSTAGRAM_URL = 'https://instagram.com/vet.eduardapata'
 
 export default function Hero() {
   const openWhatsApp = () => {
@@ -23,71 +23,72 @@ export default function Hero() {
     <section className="hero">
       <div className="container">
         <div className="hero-grid">
-          <div className="hero-copy">
-            <div className="badge">Fisioterapia e reabilitação veterinária em Porto Alegre</div>
+          <div className="hero-top">
+            <div className="hero-copy">
+              <div className="badge">Fisioterapia e reabilitação veterinária em Porto Alegre</div>
 
-            <div className="hero-headline-wrap">
-              <div>
-                <h1>
-                  Cuidado,
-                  <br />
-                  movimento
-                  <br />
-                  e conforto
-                  <br />
-                  para o seu pet.
-                </h1>
+              <h1>
+                Cuidado,
+                <br />
+                movimento
+                <br />
+                e conforto
+                <br />
+                para o seu pet.
+              </h1>
 
-                <p>
-                  Atendimento domiciliar com uma abordagem acolhedora, individualizada e focada
-                  em reabilitação, mobilidade e qualidade de vida. Um cuidado técnico, humano
-                  e pensado para a rotina real da família.
-                </p>
+              <p>
+                Atendimento domiciliar com uma abordagem acolhedora, individualizada e focada
+                em reabilitação, mobilidade e qualidade de vida. Um cuidado técnico, humano
+                e pensado para a rotina real da família.
+              </p>
 
-                <div className="hero-actions">
-                  <button className="btn btn-primary" onClick={openWhatsApp}>
-                    Agendar pelo WhatsApp
-                  </button>
+              <div className="hero-actions">
+                <button className="btn btn-primary" onClick={openWhatsApp}>
+                  Agendar pelo WhatsApp
+                </button>
 
-                  <button className="btn btn-secondary" onClick={openInstagram}>
-                    Ver Instagram
-                  </button>
-                </div>
-
-                <div className="hero-points">
-                  <div className="hero-point">Atendimento domiciliar</div>
-                  <div className="hero-point">Pós-operatório e reabilitação</div>
-                  <div className="hero-point">Porto Alegre e região</div>
-                  <div className="hero-point">Mais conforto para o pet</div>
-                </div>
+                <button className="btn btn-secondary" onClick={openInstagram}>
+                  Ver Instagram
+                </button>
               </div>
 
-              <div className="hero-visual">
-                <div className="hero-blob-1" />
-                <div className="hero-blob-2" />
-                <div className="hero-blob-3" />
-
-                <div className="hero-photo-card">
-                  <div className="hero-photo" />
-                </div>
-
-                <div className="floating-mini-card card-a">
-                  <strong>Atendimento domiciliar</strong>
-                  <span>Mais conforto e menos desgaste para o animal.</span>
-                </div>
-
-                <div className="floating-mini-card card-b">
-                  <strong>Porto Alegre e região</strong>
-                  <span>Disponibilidade sob consulta conforme localização.</span>
-                </div>
-
-                <div className="floating-mini-card card-c">
-                  <strong>Reabilitação veterinária</strong>
-                  <span>Abordagem técnica com olhar humano e acolhedor.</span>
-                </div>
+              <div className="hero-mini-info">
+                <div className="hero-mini-pill">Atendimento domiciliar</div>
+                <div className="hero-mini-pill">Reabilitação veterinária</div>
+                <div className="hero-mini-pill">Porto Alegre e região</div>
               </div>
             </div>
 
+            <div className="hero-visual">
+              <div className="hero-blob-1" />
+              <div className="hero-blob-2" />
+              <div className="hero-blob-3" />
+              <div className="hero-ring" />
+
+              <div className="hero-photo-card">
+                <div className="hero-photo" />
+                <div className="hero-photo-glow" />
+
+                <div className="hero-floating-label hero-floating-label-top">
+                  <strong>Cuidado humanizado</strong>
+                  <span>mais acolhimento para o pet e para a família</span>
+                </div>
+              </div>
+
+              <div className="floating-mini-card card-b">
+                <strong>Plano individual</strong>
+                <span>Cada caso é conduzido com atenção ao contexto real do pet.</span>
+              </div>
+
+              <div className="floating-mini-card card-c">
+                <strong>Reabilitação veterinária</strong>
+                <span>Abordagem técnica com olhar humano e acolhedor.</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-bottom">
             <div className="trust-strip">
               <div className="trust-item">
                 <strong>Atendimento em casa</strong>

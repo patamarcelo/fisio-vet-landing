@@ -178,6 +178,9 @@ export default function Home() {
 
           <div className="site-footer-bottom">
             <span>© 2026 FisioVet Domiciliar. Todos os direitos reservados.</span>
+            <span>
+              Atendimento domiciliar em Porto Alegre e região metropolitana.
+            </span>
           </div>
         </div>
       </footer>

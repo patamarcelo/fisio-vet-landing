@@ -802,9 +802,21 @@ img {
   border-radius: 40px;
   background:
     linear-gradient(180deg, rgba(255, 248, 243, 0.04), rgba(81, 43, 20, 0.08)),
-    url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    url('/public/images/profile-2.jpg') center/cover no-repeat;
   border: 1px solid rgba(92, 48, 22, 0.08);
   box-shadow: var(--shadow);
+}
+
+.about-photo {
+  position: relative;
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: radial-gradient(circle at top right, rgba(240,166,74,0.15), transparent 40%);
 }
 
 .about-photo-overlay {
@@ -985,10 +997,12 @@ img {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 248, 243, 0.08), rgba(81, 43, 20, 0.08)),
-    url('https://images.unsplash.com/photo-1518715308788-3005759c2f89?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  url('/images/vaccine.png') center 25% / cover no-repeat; 
   box-shadow: var(--shadow);
   border: 1px solid rgba(92, 48, 22, 0.08);
 }
+
+
 
 .premium-vaccine-visual {
   position: relative;

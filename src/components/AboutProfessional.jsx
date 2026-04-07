@@ -1,4 +1,5 @@
 import { trackEvent } from '../utils/trackEvent'
+import aboutImage from '../../public/images/profile-2.jpg'
 
 const WHATSAPP_NUMBER = '5551992806633'
 const INSTAGRAM_URL = 'https://instagram.com/vet.eduardapata'
@@ -30,7 +31,15 @@ export default function AboutProfessional() {
       <div className="container">
         <div className="about-grid">
           <div className="about-photo-wrap">
-            <div className="about-photo" />
+            <div
+              className="about-photo"
+              style={{
+                background: `
+                linear-gradient(180deg, rgba(255, 248, 243, 0.04), rgba(81, 43, 20, 0.08)),
+                url(${aboutImage}) center/cover no-repeat
+              `,
+              }}
+            />
             <div className="about-photo-overlay" />
 
             <div className="about-badge about-badge-a">

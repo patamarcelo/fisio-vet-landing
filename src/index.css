@@ -1859,9 +1859,13 @@ img {
 
   .mobile-menu-btn {
     display: inline-flex;
+    margin-right: 20px;
   }
 
   .brand span {
     font-size: 15px;
+  }
+  .brand {
+    margin-left: 20px;
   }
 }

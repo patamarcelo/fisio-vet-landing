@@ -72,7 +72,6 @@ export default function Home() {
             <a href="#casos">Casos</a>
             <a href="#quem-sou-eu">Quem sou eu</a>
             <a href="#vacinas">Vacinas</a>
-            <a href="#instagram">Instagram</a>
             <a href="#faq">FAQ</a>
           </nav>
 

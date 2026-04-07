@@ -109,7 +109,7 @@ export default function Home() {
         <Testimonials />
         <ServiceArea />
         <VaccinesSection />
-        <InstagramSection />
+        {/* <InstagramSection /> */}
         <FAQ />
         <FooterCTA />
       </main>

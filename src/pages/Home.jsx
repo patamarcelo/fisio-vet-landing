@@ -15,7 +15,7 @@ import FloatingWhatsApp from '../components/FloatingWhatsApp'
 import { initGA } from '../utils/analytics'
 import { trackEvent } from '../utils/trackEvent'
 
-const WHATSAPP_NUMBER = '5551999999999'
+const WHATSAPP_NUMBER = '5551992806633'
 
 export default function Home() {
   useEffect(() => {

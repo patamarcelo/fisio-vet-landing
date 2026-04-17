@@ -3,14 +3,31 @@ import { trackEvent } from '../utils/trackEvent'
 const WHATSAPP_NUMBER = '5551992806633'
 const INSTAGRAM_URL = 'https://instagram.com/vet.eduardapata'
 
-export default function Hero() {
+export default function Hero({
+  badge = 'Fisioterapia veterinária domiciliar em Porto Alegre',
+  title = (
+    <>
+      Fisioterapia veterinária
+      <br />
+      em Porto Alegre
+      <br />
+      para cães e gatos
+    </>
+  ),
+  description = (
+    <>
+      Atendimento domiciliar com foco em reabilitação veterinária, alívio da dor,
+      recuperação pós-operatória, melhora da mobilidade e qualidade de vida do seu pet.
+      Um cuidado técnico, acolhedor e individualizado para a rotina real da família.
+    </>
+  ),
+  whatsappText = 'Olá! Gostaria de saber mais sobre fisioterapia veterinária domiciliar para meu pet.',
+  miniPills = ['Atendimento domiciliar', 'Reabilitação veterinária', 'Porto Alegre e região'],
+}) {
   const openWhatsApp = () => {
     trackEvent('click_whatsapp_hero', { section: 'hero' })
 
-    const text = encodeURIComponent(
-      'Olá! Gostaria de saber mais sobre fisioterapia veterinária domiciliar para meu pet.'
-    )
-
+    const text = encodeURIComponent(whatsappText)
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank')
   }
 
@@ -25,23 +42,11 @@ export default function Hero() {
         <div className="hero-grid">
           <div className="hero-top">
             <div className="hero-copy">
-              <div className="badge">Fisioterapia e reabilitação veterinária em Porto Alegre</div>
+              <div className="badge">{badge}</div>
 
-              <h1>
-                Cuidado,
-                <br />
-                movimento
-                <br />
-                e conforto
-                <br />
-                para o seu pet.
-              </h1>
+              <h1>{title}</h1>
 
-              <p>
-                Atendimento domiciliar com uma abordagem acolhedora, individualizada e focada
-                em reabilitação, mobilidade e qualidade de vida. Um cuidado técnico, humano
-                e pensado para a rotina real da família.
-              </p>
+              <p>{description}</p>
 
               <div className="hero-actions">
                 <button className="btn btn-primary" onClick={openWhatsApp}>
@@ -54,9 +59,11 @@ export default function Hero() {
               </div>
 
               <div className="hero-mini-info">
-                <div className="hero-mini-pill">Atendimento domiciliar</div>
-                <div className="hero-mini-pill">Reabilitação veterinária</div>
-                <div className="hero-mini-pill">Porto Alegre e região</div>
+                {miniPills.map((item) => (
+                  <div className="hero-mini-pill" key={item}>
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
 

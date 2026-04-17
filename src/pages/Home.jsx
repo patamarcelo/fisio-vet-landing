@@ -13,6 +13,9 @@ import FooterCTA from '../components/FooterCTA'
 import FloatingWhatsApp from '../components/FloatingWhatsApp'
 import { initGA } from '../utils/analytics'
 import { trackEvent } from '../utils/trackEvent'
+import HomeServicesGrid from '../components/HomeServicesGrid'
+import InternalLinks from '../components/InternalLinks'
+
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -67,12 +70,16 @@ export default function Home() {
           </a>
 
           <nav className="nav-links">
-            <a href="#beneficios">Benefícios</a>
             <a href="#como-funciona">Como funciona</a>
-            <a href="#casos">Casos</a>
             <a href="#quem-sou-eu">Quem sou eu</a>
             <a href="#vacinas">Vacinas</a>
             <a href="#faq">FAQ</a>
+            <a href="/fisioterapia-veterinaria-porto-alegre">Fisioterapia</a>
+            <a href="/reabilitacao-veterinaria-porto-alegre">Reabilitação</a>
+            <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre">Domiciliar</a>
+            <nav className="nav-links">
+
+            </nav>
           </nav>
 
           <div className="nav-actions">
@@ -80,8 +87,8 @@ export default function Home() {
               Instagram
             </a>
 
-            <a 
-            href={`https://wa.me/5551992806633?text=${encodeURIComponent(
+            <a
+              href={`https://wa.me/5551992806633?text=${encodeURIComponent(
                 'Olá! Gostaria de agendar uma avaliação para meu pet.'
               )}`}
               target="_blank"
@@ -93,8 +100,8 @@ export default function Home() {
                 })
                 closeMobileMenu()
               }}
-            
-            className="btn btn-primary nav-btn-desktop">
+
+              className="btn btn-primary nav-btn-desktop">
               Agendar
             </a>
 
@@ -136,6 +143,9 @@ export default function Home() {
             <a href="#casos" onClick={closeMobileMenu}>Casos</a>
             <a href="#quem-sou-eu" onClick={closeMobileMenu}>Quem sou eu</a>
             <a href="#vacinas" onClick={closeMobileMenu}>Vacinas</a>
+            <a href="/fisioterapia-veterinaria-porto-alegre" onClick={closeMobileMenu}>Fisioterapia</a>
+            <a href="/reabilitacao-veterinaria-porto-alegre" onClick={closeMobileMenu}>Reabilitação</a>
+            <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre" onClick={closeMobileMenu}>Domiciliar</a>
             <a href="#faq" onClick={closeMobileMenu}>Perguntas frequentes</a>
             <a
               href={`https://wa.me/5551992806633?text=${encodeURIComponent(
@@ -159,14 +169,14 @@ export default function Home() {
 
       <main id="top">
         <Hero />
-        <Benefits />
-        <HowItWorks />
+        <ServiceArea />
+        <HomeServicesGrid />
         <Conditions />
+        <HowItWorks />
         <AboutProfessional />
         <Testimonials />
-        <ServiceArea />
-        <VaccinesSection />
         <FAQ />
+        <InternalLinks />
         <FooterCTA />
       </main>
 
@@ -207,18 +217,11 @@ export default function Home() {
 
             <div className="site-footer-columns">
               <div className="site-footer-column">
-                <h4>Navegação</h4>
-                <a href="#beneficios">Benefícios</a>
-                <a href="#como-funciona">Como funciona</a>
-                <a href="#casos">Casos</a>
-                <a href="#quem-sou-eu">Quem sou eu</a>
-              </div>
-
-              <div className="site-footer-column">
-                <h4>Atendimento</h4>
-                <a href="#vacinas">Vacinas</a>
+                <h4>Serviços</h4>
+                <a href="/fisioterapia-veterinaria-porto-alegre">Fisioterapia veterinária</a>
+                <a href="/reabilitacao-veterinaria-porto-alegre">Reabilitação veterinária</a>
+                <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre">Atendimento domiciliar</a>
                 <a href="#faq">Perguntas frequentes</a>
-                <a href="#top">Agendar avaliação</a>
               </div>
 
               <div className="site-footer-column">

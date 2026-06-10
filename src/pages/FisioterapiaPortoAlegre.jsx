@@ -16,7 +16,8 @@ export default function FisioterapiaPortoAlegre() {
       <SeoLocalService
         title="Fisioterapia Veterinária em Porto Alegre | Atendimento Domiciliar"
         description="Fisioterapia veterinária em Porto Alegre com atendimento domiciliar para cães e gatos. Reabilitação, mobilidade, dor e qualidade de vida."
-        canonical="https://fisiovetlanding.netlify.app/fisioterapia-veterinaria-porto-alegre"
+        canonical="https://duda.fisiovet.app/fisioterapia-veterinaria-porto-alegre"
+        serviceName="Fisioterapia veterinária em Porto Alegre"
       />
 
       <main>

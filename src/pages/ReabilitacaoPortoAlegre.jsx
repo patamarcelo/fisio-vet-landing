@@ -15,8 +15,9 @@ export default function ReabilitacaoPortoAlegre() {
     <div className="page-shell">
       <SeoLocalService
         title="Reabilitação Veterinária em Porto Alegre | Atendimento Domiciliar"
-        description="Reabilitação veterinária em Porto Alegre com atendimento domiciliar e foco em mobilidade, recuperação funcional e qualidade de vida do pet."
-        canonical="https://fisiovetlanding.netlify.app/reabilitacao-veterinaria-porto-alegre"
+        description="Reabilitação veterinária em Porto Alegre com atendimento domiciliar para cães e gatos, com foco em mobilidade, recuperação funcional e qualidade de vida."
+        canonical="https://duda.fisiovet.app/reabilitacao-veterinaria-porto-alegre"
+        serviceName="Reabilitação veterinária em Porto Alegre"
       />
 
       <main>

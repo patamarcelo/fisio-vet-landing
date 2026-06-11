@@ -72,14 +72,11 @@ export default function Home() {
           <nav className="nav-links">
             <a href="#como-funciona">Como funciona</a>
             <a href="#quem-sou-eu">Quem sou eu</a>
-            <a href="#vacinas">Vacinas</a>
             <a href="#faq">FAQ</a>
             <a href="/fisioterapia-veterinaria-porto-alegre">Fisioterapia</a>
             <a href="/reabilitacao-veterinaria-porto-alegre">Reabilitação</a>
-            <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre">Domiciliar</a>
-            <nav className="nav-links">
-
-            </nav>
+            <a href="/fisioterapia-para-caes-porto-alegre">Cães</a>
+            <a href="/reabilitacao-pos-operatoria-caes-porto-alegre">Pós-operatório</a>
           </nav>
 
           <div className="nav-actions">
@@ -142,11 +139,13 @@ export default function Home() {
             <a href="#como-funciona" onClick={closeMobileMenu}>Como funciona</a>
             <a href="#casos" onClick={closeMobileMenu}>Casos</a>
             <a href="#quem-sou-eu" onClick={closeMobileMenu}>Quem sou eu</a>
-            <a href="#vacinas" onClick={closeMobileMenu}>Vacinas</a>
             <a href="/fisioterapia-veterinaria-porto-alegre" onClick={closeMobileMenu}>Fisioterapia</a>
             <a href="/reabilitacao-veterinaria-porto-alegre" onClick={closeMobileMenu}>Reabilitação</a>
             <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre" onClick={closeMobileMenu}>Domiciliar</a>
+            <a href="/fisioterapia-para-caes-porto-alegre" onClick={closeMobileMenu}>Fisioterapia para cães</a>
+            <a href="/reabilitacao-pos-operatoria-caes-porto-alegre" onClick={closeMobileMenu}>Pós-operatório para cães</a>
             <a href="#faq" onClick={closeMobileMenu}>Perguntas frequentes</a>
+
             <a
               href={`https://wa.me/5551992806633?text=${encodeURIComponent(
                 'Olá! Gostaria de agendar uma avaliação para meu pet.'
@@ -221,6 +220,8 @@ export default function Home() {
                 <a href="/fisioterapia-veterinaria-porto-alegre">Fisioterapia veterinária</a>
                 <a href="/reabilitacao-veterinaria-porto-alegre">Reabilitação veterinária</a>
                 <a href="/fisioterapia-veterinaria-domiciliar-porto-alegre">Atendimento domiciliar</a>
+                <a href="/fisioterapia-para-caes-porto-alegre">Fisioterapia para cães</a>
+                <a href="/reabilitacao-pos-operatoria-caes-porto-alegre">Pós-operatório para cães</a>
                 <a href="#faq">Perguntas frequentes</a>
               </div>
 

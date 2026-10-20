@@ -100,14 +100,21 @@ for (const entry of pages.slice(1)) {
 test("Contact links, existing anchor targets and event attribution", async ({
   page,
 }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
+  await expect(page.locator(".mobile-contact")).toHaveText("Falar no WhatsApp");
+  await expect(page.locator(".mobile-contact .whatsapp-icon")).toHaveCount(1);
+  await expect(page.locator(".mobile-contact .button")).toHaveCSS(
+    "background-color",
+    "rgb(37, 211, 102)",
+  );
   for (const link of await page.locator('a[href*="instagram.com"]').all()) {
     await expect(link).toHaveAttribute("href", INSTAGRAM_URL);
   }
   for (const link of await page.locator('a[href*="wa.me"]').all()) {
     const url = new URL(await link.getAttribute("href"));
     expect(url.pathname).toBe(`/${WHATSAPP_NUMBER}`);
-    expect(url.searchParams.get("text")).toBeTruthy();
+    expect(url.searchParams.get("text")).toContain("Vim pelo site");
   }
   const broken = await page.locator('a[href*="#"]').evaluateAll((links) =>
     links

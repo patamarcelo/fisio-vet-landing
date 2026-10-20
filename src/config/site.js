@@ -6,7 +6,7 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const GA_MEASUREMENT_ID = "G-T7Z91XP52B";
 
 export function whatsappUrl(
-  message = "Olá, Eduarda! Gostaria de saber sobre fisioterapia em casa para meu pet.",
+  message = "Olá! Vim pelo site e gostaria de mais informações sobre o atendimento de fisioterapia veterinária domiciliar para meu pet.",
 ) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

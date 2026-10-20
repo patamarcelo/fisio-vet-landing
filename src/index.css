@@ -1,16 +1,18 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  color: #263e35;
-  background: #faf8f3;
+  color: #0b2d60;
+  background: #fbfdfd;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --ink: #263e35;
-  --muted: #59645d;
-  --paper: #faf8f3;
-  --line: #d7ddd3;
-  --accent: #a04d35;
-  --green: #294f3c;
+  --ink: #0b2d60;
+  --muted: #4d6175;
+  --paper: #fbfdfd;
+  --line: #d2e3e7;
+  --accent: #006b75;
+  --navy: #0b2d60;
+  --whatsapp: #25d366;
+  --whatsapp-ink: #063c23;
 }
 * {
   box-sizing: border-box;
@@ -38,7 +40,7 @@ summary {
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-  outline: 3px solid #a04d35;
+  outline: 3px solid #006b75;
   outline-offset: 5px;
 }
 a {
@@ -130,11 +132,11 @@ svg {
   transition: background 0.2s;
 }
 .button-primary {
-  color: #fff;
-  background: var(--green);
+  color: var(--whatsapp-ink);
+  background: var(--whatsapp);
 }
 .button-primary:hover {
-  background: #1c392b;
+  background: #20c760;
 }
 .text-link {
   display: inline-flex;
@@ -181,36 +183,22 @@ svg {
   align-items: center;
   gap: 10px;
 }
-.brand-symbol {
-  width: 36px;
-  height: 40px;
-  border: 1px solid #a3b1a2;
-  border-radius: 18px 18px 5px 5px;
+.brand-name {
   font-family: Georgia, serif;
-  font-size: 25px;
-  padding: 0 4px;
-  line-height: 36px;
-  letter-spacing: -5px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: var(--ink);
 }
-.brand-symbol span {
-  color: var(--accent);
-}
-.brand strong {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: 27px;
-  letter-spacing: -1.5px;
-  line-height: 1;
-}
-.brand strong span {
-  color: var(--accent);
-}
-.brand small {
+.brand-name small {
   display: block;
-  font-size: 8px;
-  font-weight: 600;
-  letter-spacing: 2.2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.53rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
   margin-top: 6px;
+}
+.whatsapp-icon {
+  flex-shrink: 0;
 }
 .desktop-nav,
 .header-contact {
@@ -242,7 +230,7 @@ svg {
   padding: 10px 20px 24px;
   max-height: calc(100dvh - 90px);
   overflow-y: auto;
-  box-shadow: 0 12px 16px #263e350a;
+  box-shadow: 0 12px 16px #0b2d600a;
   display: grid;
   gap: 2px;
 }
@@ -256,7 +244,7 @@ svg {
 }
 .hero {
   padding-top: 35px;
-  background: #f1f0e7;
+  background: #eef6f7;
 }
 .hero-copy {
   padding-bottom: 30px;
@@ -289,7 +277,7 @@ svg {
 .hero-note {
   font-size: 0.73rem;
   margin: 12px 0 0;
-  color: #5a655d;
+  color: #526577;
 }
 .hero-photo {
   margin: 0;
@@ -317,7 +305,7 @@ svg {
   color: var(--ink);
 }
 .hero-foot {
-  border-top: 1px solid #cdd3c6;
+  border-top: 1px solid #c5dfe3;
   padding-block: 18px;
   display: flex;
   flex-wrap: wrap;
@@ -326,7 +314,7 @@ svg {
   font-size: 0.62rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #536052;
+  color: #4d6175;
 }
 .hero-foot span:last-child {
   display: none;
@@ -370,7 +358,7 @@ svg {
   margin: 22px 0 0;
 }
 .process-section {
-  background: #e7ece1;
+  background: #e5f3f4;
 }
 .steps {
   list-style: none;
@@ -419,7 +407,7 @@ svg {
   margin-top: 10px;
 }
 .area-section {
-  background: #ebe5d9;
+  background: #edf5fa;
 }
 .two-column {
   display: grid;
@@ -470,15 +458,15 @@ svg {
   max-width: 600px;
 }
 .closing-section {
-  background: var(--green);
+  background: var(--navy);
   color: var(--paper);
   text-align: center;
 }
 .closing-section .eyebrow {
-  color: #d5baa4;
+  color: #9fe1e6;
 }
 .closing-section p {
-  color: #d5dfd2;
+  color: #d5e8f0;
   max-width: 410px;
   margin-inline: auto;
 }
@@ -486,17 +474,12 @@ svg {
   font-size: clamp(2.8rem, 10vw, 4.5rem);
 }
 .closing-section .button {
-  background: var(--paper);
-  color: var(--ink);
   margin-top: 10px;
-}
-.closing-section .button:hover {
-  background: #e7e8df;
 }
 .site-footer {
   padding-top: 45px;
   padding-bottom: 100px;
-  background: #f1f0e7;
+  background: #eef6f7;
 }
 .footer-grid {
   display: grid;
@@ -554,15 +537,10 @@ svg {
   border-top: 1px solid var(--line);
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
 }
-.mobile-contact > span {
-  font-size: 0.7rem;
-  max-width: 75px;
-  line-height: 1.5;
-}
 .mobile-contact .button {
   flex: 1;
-  max-width: 350px;
-  min-height: 46px;
+  max-width: 500px;
+  min-height: 50px;
   padding: 12px;
   font-size: 0.85rem;
   gap: 10px;
@@ -636,9 +614,6 @@ svg {
   }
   .two-column .button {
     width: auto;
-  }
-  .mobile-contact > span {
-    max-width: none;
   }
 }
 @media (min-width: 900px) {
@@ -722,7 +697,7 @@ svg {
   }
   .steps li {
     padding: 0;
-    border-top: 1px solid #bcc8b7;
+    border-top: 1px solid #b5d5da;
     padding-top: 25px;
   }
   .step-number {

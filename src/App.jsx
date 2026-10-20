@@ -85,7 +85,7 @@ function Header() {
         <a className="brand" href="/" title="Voltar ao início">
           <img
             className="brand-logo"
-            src="/images/logo-eduarda.JPG"
+            src="/images/logo-eduarda-header.JPG"
             width="1254"
             height="1254"
             alt=""

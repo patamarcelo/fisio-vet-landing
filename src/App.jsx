@@ -83,6 +83,13 @@ function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a className="brand" href="/" title="Voltar ao início">
+          <img
+            className="brand-logo"
+            src="/images/logo-eduarda.JPG"
+            width="1254"
+            height="1254"
+            alt=""
+          />
           <span className="brand-name">
             Dra. Eduarda Pata<small>MÉDICA-VETERINÁRIA</small>
           </span>
@@ -195,8 +202,14 @@ function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <a href="/" className="footer-name">
-            FisioVet · Eduarda Pata
+          <a href="/" className="footer-logo">
+            <img
+              src="/images/logo-eduarda.JPG"
+              width="1254"
+              height="1254"
+              loading="lazy"
+              alt="Dra. Eduarda Pata — médica-veterinária"
+            />
           </a>
           <p>
             Fisioterapia e reabilitação veterinária.

@@ -106,7 +106,7 @@ test("Contact links, existing anchor targets and event attribution", async ({
   await expect(page.locator(".mobile-contact .whatsapp-icon")).toHaveCount(1);
   await expect(page.locator(".mobile-contact .button")).toHaveCSS(
     "background-color",
-    "rgb(37, 211, 102)",
+    "rgb(0, 124, 131)",
   );
   for (const link of await page.locator('a[href*="instagram.com"]').all()) {
     await expect(link).toHaveAttribute("href", INSTAGRAM_URL);

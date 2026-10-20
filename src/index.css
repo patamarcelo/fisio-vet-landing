@@ -11,8 +11,8 @@
   --line: #d2e3e7;
   --accent: #006b75;
   --navy: #0b2d60;
-  --whatsapp: #25d366;
-  --whatsapp-ink: #063c23;
+  --whatsapp: #007c83;
+  --whatsapp-ink: #fff;
 }
 * {
   box-sizing: border-box;
@@ -136,7 +136,7 @@ svg {
   background: var(--whatsapp);
 }
 .button-primary:hover {
-  background: #20c760;
+  background: #00636a;
 }
 .text-link {
   display: inline-flex;
@@ -183,19 +183,41 @@ svg {
   align-items: center;
   gap: 10px;
 }
+.brand {
+  gap: 6px;
+}
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 .brand-name {
   font-family: Georgia, serif;
-  font-size: 1.3rem;
-  line-height: 1.2;
-  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.3;
+  white-space: nowrap;
 }
 .brand-name small {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.53rem;
-  letter-spacing: 0.15em;
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
   color: var(--accent);
-  margin-top: 6px;
+  margin-top: 5px;
+}
+.site-header {
+  background: #fff;
+}
+.footer-logo {
+  display: block;
+  width: 210px;
+  max-width: 100%;
+}
+.footer-logo img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
 }
 .whatsapp-icon {
   flex-shrink: 0;
@@ -751,5 +773,21 @@ svg {
   *::after {
     transition: none !important;
     animation: none !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .header-inner {
+    gap: 8px;
+  }
+  .brand {
+    gap: 4px;
+  }
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+  .brand-name {
+    font-size: 0.94rem;
   }
 }

@@ -202,20 +202,22 @@ function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <a href="/" className="footer-logo">
-            <img
-              src="/images/logo-eduarda.JPG"
-              width="1254"
-              height="1254"
-              loading="lazy"
-              alt="Dra. Eduarda Pata — médica-veterinária"
-            />
-          </a>
-          <p>
-            Fisioterapia e reabilitação veterinária.
-            <br />
-            Cães e gatos. Na sua casa.
-          </p>
+          <div className="footer-brand-content">
+            <a href="/" className="footer-logo">
+              <img
+                src="/images/logo-eduarda.JPG"
+                width="1254"
+                height="1254"
+                loading="lazy"
+                alt="Dra. Eduarda Pata — médica-veterinária"
+              />
+            </a>
+            <p>
+              Fisioterapia e reabilitação veterinária.
+              <br />
+              Cães e gatos. Na sua casa.
+            </p>
+          </div>
           <InstagramLink section="footer" className="text-link">
             @fisiovet.eduardapata
           </InstagramLink>

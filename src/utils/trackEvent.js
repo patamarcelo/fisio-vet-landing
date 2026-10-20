@@ -1,7 +1,5 @@
-export const trackEvent = (event, params = {}) => {
-  if (!window.gtag) return
-
-  window.gtag('event', event, {
-    ...params,
-  })
+export function trackEvent(event, params = {}) {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", event, params);
+  }
 }

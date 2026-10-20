@@ -1,15 +1,13 @@
-// src/main.jsx
+import { StrictMode } from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
-  </React.StrictMode>
-)
+const root = document.getElementById("root");
+const app = (
+  <StrictMode>
+    <App path={window.location.pathname} />
+  </StrictMode>
+);
+if (root.querySelector("main")) hydrateRoot(root, app);
+else createRoot(root).render(app);

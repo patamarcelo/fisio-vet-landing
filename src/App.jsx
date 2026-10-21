@@ -398,9 +398,6 @@ export default function App({ path = "/" }) {
                 <br />
                 <em>a Eduarda.</em>
               </h2>
-              <span className="signature-line">
-                Medicina veterinária · Fisioterapia e reabilitação
-              </span>
             </div>
             <div className="about-copy">
               <p className="large-copy">

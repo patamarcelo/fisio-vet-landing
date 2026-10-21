@@ -219,9 +219,6 @@ svg {
     backdrop-filter: blur(14px) saturate(140%);
   }
 }
-.brand-logo {
-  mix-blend-mode: multiply;
-}
 .footer-brand-content {
   text-align: center;
 }

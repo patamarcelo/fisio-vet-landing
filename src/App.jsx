@@ -86,7 +86,7 @@ function Header() {
         <a className="brand" href="/" title="Voltar ao início">
           <img
             className="brand-logo"
-            src="/images/logo-eduarda-header.JPG"
+            src="/images/logo-eduarda-header.png"
             width="1254"
             height="1254"
             alt=""
@@ -173,15 +173,14 @@ const steps = [
 ];
 const questions = [
   [
-    "✨ Como funciona o atendimento de fisioterapia veterinária?",
+    "Como funciona o atendimento de fisioterapia veterinária?",
     `O primeiro passo é sempre uma avaliação inicial, onde conversamos sobre o histórico do pet, realizo os testes físicos e funcionais necessários e avalio suas principais dificuldades. A partir disso, elaboro um plano de tratamento individualizado, de acordo com as necessidades e os objetivos de cada paciente.
 
-🐾 Durante as sessões, utilizo diferentes recursos terapêuticos, conforme a necessidade de cada paciente, como magnetoterapia, laserterapia, eletroterapia, moxaterapia, alongamentos, mobilizações e exercícios terapêuticos de cinesioterapia, que auxiliam na recuperação funcional, no alívio da dor, na melhora da mobilidade e no fortalecimento muscular.
+Durante as sessões, utilizo diferentes recursos terapêuticos, conforme a necessidade de cada paciente, como magnetoterapia, laserterapia, eletroterapia, moxaterapia, alongamentos, mobilizações e exercícios terapêuticos de cinesioterapia, que auxiliam na recuperação funcional, no alívio da dor, na melhora da mobilidade e no fortalecimento muscular.
 
 Cada atendimento é adaptado ao quadro clínico, à fase da recuperação e à evolução do paciente.
 
-🏡 Os atendimentos são realizados a domicílio, com frequência definida de acordo com o quadro clínico e a evolução do paciente.
-Cada sessão dura em torno de 1 hora.`,
+Os atendimentos são realizados a domicílio, com frequência definida de acordo com o quadro clínico e a evolução do paciente. Cada sessão dura em torno de 1 hora.`,
   ],
   [
     "Você atende cães e gatos?",

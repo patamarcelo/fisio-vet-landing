@@ -36,6 +36,17 @@ for (const width of [320, 360, 390, 768, 1440]) {
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto("/");
     await expect(page.locator("h1")).toHaveText(pages[0].heading);
+    await expect(page.locator(".brand-logo")).toHaveAttribute(
+      "src",
+      "/images/logo-eduarda-header.png",
+    );
+    await expect(page.locator(".brand-logo")).toHaveJSProperty(
+      "complete",
+      true,
+    );
+    expect(
+      await page.locator(".brand-logo").evaluate((image) => image.naturalWidth),
+    ).toBeGreaterThan(0);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= window.innerWidth,

@@ -196,10 +196,6 @@ Cada sessão dura em torno de 1 hora.`,
     "Se ele já está em tratamento ou passou por cirurgia, compartilhe as orientações do veterinário responsável. A necessidade de encaminhamento e o momento de começar são avaliados conforme o caso.",
   ],
   [
-    "Quantas sessões serão necessárias?",
-    "Não há um número igual para todos os animais. A frequência e a duração do acompanhamento dependem da avaliação, da condição clínica e da resposta ao tratamento.",
-  ],
-  [
     "Como consultar valores e horários?",
     "Pelo WhatsApp, informe seu bairro, se o pet é cão ou gato e o motivo do contato. Assim, você pode consultar valores e disponibilidade antes de combinar a visita.",
   ],
@@ -220,11 +216,7 @@ function Footer() {
                 alt="Dra. Eduarda Pata — médica-veterinária"
               />
             </a>
-            <p>
-              Fisioterapia e reabilitação veterinária.
-              <br />
-              Cães e gatos. Na sua casa.
-            </p>
+            <p>Fisioterapia e Reabilitação Veterinária.</p>
           </div>
           <InstagramLink section="footer" className="text-link">
             @fisiovet.eduardapata

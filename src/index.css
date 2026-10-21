@@ -316,11 +316,7 @@ svg {
   width: 100%;
   max-width: 360px;
 }
-.hero-note {
-  font-size: 0.73rem;
-  margin: 12px 0 0;
-  color: #526577;
-}
+
 .hero-photo {
   margin: 0;
   position: relative;
@@ -810,4 +806,14 @@ svg {
   .brand-name {
     font-size: 0.94rem;
   }
+}
+
+/* One persistent WhatsApp action on mobile; inline actions remain on desktop. */
+@media (max-width: 899px) {
+  a[data-whatsapp="inline"] {
+    display: none;
+  }
+}
+.faq-list details p {
+  white-space: pre-line;
 }

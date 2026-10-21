@@ -43,6 +43,7 @@ function ContactLink({
   return (
     <a
       className={className}
+      data-whatsapp={section === "mobile_sticky" ? "sticky" : "inline"}
       href={whatsappUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
@@ -172,12 +173,19 @@ const steps = [
 ];
 const questions = [
   [
-    "Você atende cães e gatos?",
-    "Sim. O atendimento é para cães e gatos, sempre com avaliação individual. No caso dos gatos, informe como ele costuma reagir a visitas e ao manejo para que possamos conversar sobre os cuidados necessários.",
+    "✨ Como funciona o atendimento de fisioterapia veterinária?",
+    `O primeiro passo é sempre uma avaliação inicial, onde conversamos sobre o histórico do pet, realizo os testes físicos e funcionais necessários e avalio suas principais dificuldades. A partir disso, elaboro um plano de tratamento individualizado, de acordo com as necessidades e os objetivos de cada paciente.
+
+🐾 Durante as sessões, utilizo diferentes recursos terapêuticos, conforme a necessidade de cada paciente, como magnetoterapia, laserterapia, eletroterapia, moxaterapia, alongamentos, mobilizações e exercícios terapêuticos de cinesioterapia, que auxiliam na recuperação funcional, no alívio da dor, na melhora da mobilidade e no fortalecimento muscular.
+
+Cada atendimento é adaptado ao quadro clínico, à fase da recuperação e à evolução do paciente.
+
+🏡 Os atendimentos são realizados a domicílio, com frequência definida de acordo com o quadro clínico e a evolução do paciente.
+Cada sessão dura em torno de 1 hora.`,
   ],
   [
-    "Como funciona a primeira avaliação?",
-    "A visita considera o histórico clínico, os movimentos, as limitações e o ambiente onde o animal vive. Tenha em mãos os exames e as recomendações veterinárias disponíveis. Depois da avaliação, são discutidos o plano e a frequência do acompanhamento.",
+    "Você atende cães e gatos?",
+    "Sim. O atendimento é para cães e gatos, sempre com avaliação individual. No caso dos gatos, informe como ele costuma reagir a visitas e ao manejo para que possamos conversar sobre os cuidados necessários.",
   ],
   [
     "Quais regiões são atendidas?",
@@ -290,9 +298,6 @@ export default function App({ path = "/" }) {
                 section="hero"
                 message={`Olá! Vim pelo site e gostaria de saber mais sobre ${page.service.toLowerCase()} para meu pet.`}
               />
-              <p className="hero-note">
-                Atendimento com a médica-veterinária Eduarda Pata.
-              </p>
             </div>
             <figure className="hero-photo">
               <img
@@ -471,7 +476,9 @@ export default function App({ path = "/" }) {
                     {question}
                     <span aria-hidden="true">+</span>
                   </summary>
-                  <p>{answer}</p>
+                  {answer.split("\n\n").map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </details>
               ))}
             </div>

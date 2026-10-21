@@ -56,13 +56,21 @@ for (const width of [320, 360, 390, 768, 1440]) {
       await expect(page.locator(".mobile-nav")).not.toHaveAttribute("open");
       await expect(page.locator(".mobile-nav summary")).toBeFocused();
     }
+    const contacts = page.locator('a[href*="wa.me"]:visible');
+    if (width < 900) await expect(contacts).toHaveCount(1);
+    else expect(await contacts.count()).toBeGreaterThan(1);
+    await expect(
+      page.getByText("Atendimento com a médica-veterinária Eduarda Pata.", {
+        exact: true,
+      }),
+    ).toHaveCount(0);
     const question = page.locator(".faq-list summary").first();
     await question.click();
     await expect(page.locator(".faq-list details").first()).toHaveAttribute(
       "open",
     );
     await expect(
-      page.locator(".faq-list details").first().locator("p"),
+      page.locator(".faq-list details").first().locator("p").first(),
     ).toBeVisible();
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
@@ -131,6 +139,7 @@ test("Contact links, existing anchor targets and event attribution", async ({
     window.__events = [];
     window.gtag = (...args) => window.__events.push(args);
   });
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page
     .locator('.hero-copy a[href*="wa.me"]')
     .evaluate((link) =>

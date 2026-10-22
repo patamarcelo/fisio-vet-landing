@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { pages, getPage } from "./config/pages";
 import { INSTAGRAM_URL, whatsappUrl } from "./config/site";
 import { trackEvent } from "./utils/trackEvent";
+import { trackWhatsAppClick } from "./utils/trackWhatsApp";
 
 function Arrow({ diagonal = false }) {
   return (
@@ -47,12 +48,10 @@ function ContactLink({
       href={whatsappUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() =>
-        trackEvent("click_whatsapp", {
-          section,
-          page_path: window.location.pathname,
-        })
-      }
+      onClick={(event) => trackWhatsAppClick(event, section)}
+      onAuxClick={(event) => {
+        if (event.button === 1) trackWhatsAppClick(event, section);
+      }}
     >
       <WhatsAppIcon />
       {children}

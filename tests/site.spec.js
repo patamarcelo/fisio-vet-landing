@@ -9,8 +9,9 @@ import {
 
 // No analytics calls or outbound WhatsApp/Instagram messages during verification.
 test.beforeEach(async ({ page }) => {
-  await page.route(/google-analytics|googletagmanager/, (route) =>
-    route.abort(),
+  await page.route(
+    /google-analytics|googletagmanager|connect\.facebook\.net|facebook\.com/,
+    (route) => route.abort(),
   );
 });
 

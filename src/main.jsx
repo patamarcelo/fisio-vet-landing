@@ -2,6 +2,10 @@ import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import { setupMetaPixel } from "./utils/metaPixel";
+
+// Outside React effects: StrictMode/hydration cannot initialize tracking twice.
+setupMetaPixel();
 
 const root = document.getElementById("root");
 const app = (

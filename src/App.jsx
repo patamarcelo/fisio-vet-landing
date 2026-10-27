@@ -1,8 +1,13 @@
-import { useRef } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import { pages, getPage } from "./config/pages";
 import { INSTAGRAM_URL, whatsappUrl } from "./config/site";
 import { trackEvent } from "./utils/trackEvent";
 import { trackWhatsAppClick } from "./utils/trackWhatsApp";
+
+import { isPaidInstagramVisit } from "./utils/attribution";
+
+const subscribeToAttribution = () => () => {};
+const serverAttribution = () => false;
 
 function Arrow({ diagonal = false }) {
   return (
@@ -41,11 +46,18 @@ function ContactLink({
   className = "button button-primary",
   message,
 }) {
+  // The server always renders the default URL; React updates it after hydration
+  // without mismatches or injecting UTM values into the pre-rendered HTML.
+  const fromInstagramAd = useSyncExternalStore(
+    subscribeToAttribution,
+    isPaidInstagramVisit,
+    serverAttribution,
+  );
   return (
     <a
       className={className}
       data-whatsapp={section === "mobile_sticky" ? "sticky" : "inline"}
-      href={whatsappUrl(message)}
+      href={whatsappUrl(message, fromInstagramAd)}
       target="_blank"
       rel="noopener noreferrer"
       onClick={(event) => trackWhatsAppClick(event, section)}
